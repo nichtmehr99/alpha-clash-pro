@@ -50,13 +50,17 @@ function getARandomAlphabet() {
   const alphabet = alphabets[index];
   return alphabet;
 }
-
-function getTextValueElementById (elementID){
-    const element = document.getElementById(elementID)
-    const value = parseInt(element.innerText)
-    return value
+function getElementTextValueById(elementId) {
+  const element = document.getElementById(elementId);
+  const text = element.innerText;
+  return text;
 }
-function setElementValueById(elementID,value){
-    const element = document.getElementById(elementID)
-    element.innerText= value
+function getTextValueElementById(elementID) {
+  const element = document.getElementById(elementID);
+  const value = parseInt(element.innerText);
+  return value;
+}
+function setElementValueById(elementID, value) {
+  const element = document.getElementById(elementID);
+  element.innerText = value;
 }
