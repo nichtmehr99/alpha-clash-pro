@@ -18,19 +18,119 @@
 
   <body class="font-poppins">
     <main
-      class="bg-[#010313] min-h-screen "
+      class="bg-[#010313] min-h-screen bg-[url(images/background.png)] bg-no-repeat bg-center"
     >
-      <section class="home bg-[url(images/background.png)] bg-no-repeat bg-center">
-        <div class="flex flex-col justify-center items-center min-h-screen gap-5">
+      <!-- Home screen  -->
+      <section id="home-screen">
+        <div
+          class="flex flex-col justify-center items-center min-h-screen gap-5"
+        >
           <h3 class="text-8xl uppercase text-white">Alpha Class pro</h3>
           <p class="text-white">
             Unleash your Keyboard kung fu : Press Enter to Play
           </p>
-          <button class="btn bg-white text-black">Play</button>
+          <button onclick="play()" class="btn bg-white text-black">Play</button>
         </div>
       </section>
-      <section class="play-ground"></section>
-      <section class="score"></section>
+      <!-- play ground start-->
+      <section id="play-ground" class="hidden">
+        <div class="flex flex-col items-center gap-10 ">
+          <div
+            class="artboard artboard-horizontal phone-6 border-[20px] border-[#010313CC] bg-[#FFFFFFB3] mt-10"
+          >
+            <div class="text-white flex justify-center">
+              <p class="p-2 bg-[#2F2941] rounded-b-xl">
+                Don't watch while playing....
+              </p>
+            </div>
+            <p id="current-alphabet" class="text-black text-8xl text-center mt-10 uppercase">Y</p>
+          </div>
+          <!-- keyboard start -->
+          <div>
+            <div class="flex justify-center gap-1 my-1 w-full">
+              <kbd id="q" class="kbd">q</kbd>
+              <kbd id="w" class="kbd">w</kbd>
+              <kbd id="e" class="kbd">e</kbd>
+              <kbd id="r" class="kbd">r</kbd>
+              <kbd id="t" class="kbd">t</kbd>
+              <kbd id="y" class="kbd">y</kbd>
+              <kbd id="u" class="kbd">u</kbd>
+              <kbd id="i" class="kbd">i</kbd>
+              <kbd id="o" class="kbd">o</kbd>
+              <kbd id="p" class="kbd">p</kbd>
+            </div>
+            <div class="flex justify-center gap-1 my-1 w-full">
+              <kbd id="a" class="kbd">a</kbd>
+              <kbd id="s" class="kbd">s</kbd>
+              <kbd id="d" class="kbd">d</kbd>
+              <kbd id="f" class="kbd">f</kbd>
+              <kbd id="g" class="kbd">g</kbd>
+              <kbd id="h" class="kbd">h</kbd>
+              <kbd id="j" class="kbd">j</kbd>
+              <kbd id="k" class="kbd">k</kbd>
+              <kbd id="l" class="kbd">l</kbd>
+            </div>
+            <div class="flex justify-center gap-1 my-1 w-full">
+              <kbd id="z" class="kbd">z</kbd>
+              <kbd id="x" class="kbd">x</kbd>
+              <kbd id="c" class="kbd">c</kbd>
+              <kbd id="v" class="kbd">v</kbd>
+              <kbd id="b" class="kbd">b</kbd>
+              <kbd id="n" class="kbd">n</kbd>
+              <kbd id="m" class="kbd">m</kbd>
+              <kbd id="/" class="kbd">/</kbd>
+            </div>
+          </div>
+          <!-- keyboard end -->
+          <div class="flex justify-between">
+            <button class="btn">
+              Life <span id="current-life">5</span>
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                class="h-6 w-6"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"
+                />
+              </svg>
+            </button>
+            <button class="btn">
+              Score <span id="current-score">1</span>
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                class="h-6 w-6"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"
+                />
+              </svg>
+            </button>
+          </div>
+        </div>
+      </section>
+      <!-- score field End -->
+      <!-- Final Score Start -->
+      <section class="score flex justify-center items-center min-h-screen hidden ">
+        <div class="text-white space-y-7 text-center bg-[#FFFFFF33] p-4 rounded-lg ">
+            <h2 class="text-8xl font-extrabold">Score :<span>0</span></h2>
+            <p>Practice makes you a Pro</p>
+            <button class="btn">Play Again</button>
+        </div>
+      </section>
     </main>
+    <script src="scripts/utility.js"></script>
+    <script src="scripts/alpha-clash.js"></script>
   </body>
 </html>
